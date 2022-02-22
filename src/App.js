@@ -1,24 +1,26 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+
+
+//components
+import { Streets } from './components/Streets';
+import { Buildings } from './components/Buildings';
+import { Flats } from './components/Flats';
+import { Clients } from './components/Clients';
+import { Layout } from 'antd';
+import { Header } from 'antd/lib/layout/layout';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Layout>
+      <Header>
+        <Streets/>
+        <Buildings/>
+        <Flats/>
+      </Header>
+      <Clients/>
+    </Layout>
   );
 }
 
